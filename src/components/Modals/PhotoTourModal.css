@@ -1,4 +1,4 @@
-/* Photo Tour Overlay (View 2) Styles */
+/* Photo Tour Full-Screen Modal Styles */
 .photo-tour-overlay {
   position: fixed;
   inset: 0;
@@ -6,24 +6,25 @@
   height: 100vh;
   background-color: #ffffff !important;
   z-index: 200;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
 
+/* Sticky Header Bar */
 .tour-header-bar {
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
-  height: 72px;
+  height: 64px;
   background-color: #ffffff !important;
   border-bottom: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 24px;
-  z-index: 10;
+  z-index: 20;
+  flex-shrink: 0;
 }
 
 .tour-header-left {
@@ -35,131 +36,220 @@
 .tour-back-btn {
   width: 36px;
   height: 36px;
+  border: none;
+  background: transparent;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  color: var(--ink);
   transition: background-color 0.15s ease;
 }
 
 .tour-back-btn:hover {
-  background-color: var(--bg-hover);
+  background-color: var(--grey100);
 }
 
 .tour-header-title {
   font-size: 16px;
-  font-weight: 700;
-  color: var(--text-main);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
 }
 
 .tour-header-right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .tour-action-btn {
   width: 36px;
   height: 36px;
+  border: none;
+  background: transparent;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  color: var(--ink);
   transition: background-color 0.15s ease;
 }
 
 .tour-action-btn:hover {
-  background-color: var(--bg-hover);
+  background-color: var(--grey100);
 }
 
-/* Tour Body */
-.tour-body-container {
-  max-width: 1040px;
+/* Tour Scroll Area */
+._EpiBQR {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  background-color: #ffffff !important;
+}
+
+._hKlfpJ {
+  max-width: 1024px;
   margin: 0 auto;
-  padding: 32px 24px 64px 24px;
-  width: 100%;
+  padding: 32px 24px 96px;
 }
 
-/* Category Navigation */
-.tour-categories-nav {
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  padding-bottom: 24px;
-  margin-bottom: 32px;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.tour-category-pill {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-pill);
-  background-color: var(--bg-white);
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-main);
-  white-space: nowrap;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
-}
-
-.tour-category-pill:hover {
-  border-color: var(--text-main);
-  background-color: var(--bg-light);
-}
-
-.cat-pill-thumb {
-  width: 24px;
-  height: 24px;
-  border-radius: 4px;
-  object-fit: cover;
-}
-
-/* Rooms Feed */
-.tour-room-section {
-  margin-bottom: 56px;
-}
-
-.tour-room-heading {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--text-main);
-  margin-bottom: 20px;
-  letter-spacing: -0.3px;
-}
-
-.tour-room-photos-grid {
+/* Categories Top Navigation Grid (4 columns on desktop) */
+._tHVclZ {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+  margin-bottom: 48px;
 }
 
-.tour-photo-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-sm);
+._gKVFNL {
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   cursor: pointer;
-  background-color: #f0f0f0;
-  height: 340px;
 }
 
-.tour-photo-img {
+._gKVFNL img {
+  width: 100%;
+  aspect-ratio: 106 / 100;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), filter 0.2s;
+}
+
+/* Hover enlargement on category thumbnails */
+._gKVFNL:hover img {
+  transform: scale(1.04);
+  filter: brightness(0.94);
+}
+
+._gKVFNL:active img {
+  transform: scale(0.99);
+}
+
+._gKVFNL ._tAbhrW {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* Tour Rooms Feed */
+.tour-rooms {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+._AWcqip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line-soft);
+}
+
+._AWcqip:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+._yZYwUW {
+  margin-bottom: 8px;
+}
+
+._AnkvRF {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+._hvJgUS {
+  font-size: 16px;
+  color: var(--muted2);
+  line-height: 1.4;
+}
+
+/* Photos Grid Rows */
+._MbzoEk {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+._wdcjGJ {
+  display: grid;
+  gap: 12px;
+}
+
+._wdcjGJ._vmCONz {
+  grid-template-columns: 1fr;
+}
+
+._wdcjGJ._DLVRjk {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Individual Photo Button with Hover Enlargement */
+._GXrMIo {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  padding: 0;
+  border: none;
+  background: #eeeeee;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+._GXrMIo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.25s ease;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1);
 }
 
-.tour-photo-overlay {
+._GXrMIo:after {
+  content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0);
-  transition: background-color 0.2s ease;
+  background: transparent;
+  transition: background 0.2s ease;
+  pointer-events: none;
 }
 
-.tour-photo-item:hover .tour-photo-overlay {
-  background-color: rgba(0, 0, 0, 0.08);
+/* Hover photo enlargement */
+._GXrMIo:hover:after {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+._GXrMIo:hover img {
+  transform: scale(1.04);
+}
+
+._GXrMIo:active img {
+  transform: scale(1);
+}
+
+/* Responsive */
+@media (max-width: 743px) {
+  ._tHVclZ {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  ._wdcjGJ._DLVRjk {
+    grid-template-columns: 1fr;
+  }
 }

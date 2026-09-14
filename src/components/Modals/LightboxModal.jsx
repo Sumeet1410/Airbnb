@@ -28,10 +28,14 @@ export default function LightboxModal({
     const handleKeyDown = (e) => {
       if (e.key === 'ArrowLeft') {
         e.preventDefault();
-        onPrev();
+        if (activeIndex > 0) {
+          onPrev();
+        }
       } else if (e.key === 'ArrowRight') {
         e.preventDefault();
-        onNext();
+        if (activeIndex < photos.length - 1) {
+          onNext();
+        }
       } else if (e.key === 'Escape') {
         e.preventDefault();
         onClose();
@@ -40,7 +44,7 @@ export default function LightboxModal({
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, onPrev, onNext, onClose]);
+  }, [isOpen, activeIndex, photos?.length, onPrev, onNext, onClose]);
 
   if (!isOpen || !photos || photos.length === 0) return null;
 
@@ -67,7 +71,7 @@ export default function LightboxModal({
         </button>
 
         <div className="lightbox-center-title">
-          {currentPhoto.roomName || currentPhoto.alt || "Photo"}
+          {currentPhoto.room || currentPhoto.roomName || currentPhoto.title || currentPhoto.alt || "Photo"}
         </div>
 
         <div className="lightbox-right-controls">

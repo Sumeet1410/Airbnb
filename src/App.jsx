@@ -83,11 +83,11 @@ export default function App() {
   };
 
   const handlePrevPhoto = () => {
-    setLightboxIndex((prev) => (prev > 0 ? prev - 1 : allPhotos.length - 1));
+    setLightboxIndex((prev) => (prev > 0 ? prev - 1 : 0));
   };
 
   const handleNextPhoto = () => {
-    setLightboxIndex((prev) => (prev < allPhotos.length - 1 ? prev + 1 : 0));
+    setLightboxIndex((prev) => (prev < allPhotos.length - 1 ? prev + 1 : prev));
   };
 
   // Reserve button action
@@ -211,10 +211,11 @@ export default function App() {
       <PhotoTourModal
         isOpen={isTourOpen}
         onClose={() => setIsTourOpen(false)}
-        rooms={listingData.photoTourRooms}
         onSelectPhoto={(idx) => {
           handleOpenLightbox(idx);
         }}
+        onShare={() => showToast("Share options")}
+        onSave={() => showToast("Saved to wishlist")}
       />
 
       {/* View 3: Single-Photo Lightbox Viewer (Accessible via Photo Tour) */}

@@ -360,10 +360,5 @@ export const listingData = {
   ]
 };
 
-// Flattened list of all photos for Lightbox viewer
-export const allPhotos = listingData.photoTourRooms.flatMap((room) =>
-  room.images.map((img) => ({
-    ...img,
-    roomName: room.name
-  }))
-);
+// Flattened list of all photos for Lightbox viewer and Photo Tour data
+export { allPhotos, photoTourCategories, photoTourSections } from './photoTourData';
