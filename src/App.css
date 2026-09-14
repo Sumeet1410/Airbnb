@@ -1,0 +1,74 @@
+/* Main Application Layout Styles */
+.airbnb-app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-main-container {
+  flex: 1;
+}
+
+/* 2-Column Desktop Grid matching reference ._lhKJir */
+.listing-layout-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 372px;
+  gap: 0 96px;
+  align-items: stretch;
+  margin-top: 24px;
+}
+
+.listing-left-column {
+  min-width: 0;
+}
+
+.listing-right-column {
+  position: relative;
+}
+
+/* Wide Sections Container below calendar matching reference #wideSections */
+.wide-sections {
+  border-top: 1px solid var(--line-soft);
+  margin-top: 48px;
+}
+
+/* Section divider */
+.section-divider {
+  border-bottom: 1px solid var(--line-soft);
+  margin: 32px 0;
+}
+
+/* Toast Message */
+.airbnb-toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222222;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  animation: toastFadeUp 0.25s ease-out;
+}
+
+@keyframes toastFadeUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 12px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 1120px) {
+  .listing-layout-columns {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

@@ -1,0 +1,506 @@
+/* Property Left Content Exact Reference Styles */
+.property-overview-section {
+  padding: 0;
+}
+
+.prop-type-heading {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.prop-specs-text {
+  font-size: 16px;
+  color: var(--ink);
+  margin-top: 6px;
+}
+
+/* Guest Favourite Box */
+.guest-favourite-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 16px 28px;
+  margin: 8px 0 0;
+}
+
+.gf-left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  color: #222;
+}
+
+.laurel-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.laurel-img.laurel-right {
+  transform: scaleX(-1);
+}
+
+.gf-label-box {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.15;
+  text-align: center;
+  padding: 0 4px;
+}
+
+.gf-tag-top {
+  display: block;
+}
+
+.gf-tag-bottom {
+  display: block;
+}
+
+.gf-desc {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--ink);
+  padding: 0 10px;
+}
+
+.gf-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-shrink: 0;
+}
+
+.gf-rating-box {
+  text-align: center;
+}
+
+.gf-score {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.gf-stars {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  margin-top: 2px;
+  color: #222;
+  font-size: 10px;
+}
+
+.gf-divider {
+  width: 1px;
+  height: 34px;
+  background: var(--line);
+}
+
+.gf-reviews-box {
+  text-align: center;
+}
+
+.gf-rev-count {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  display: block;
+}
+
+.gf-rev-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+/* Host Row */
+.prop-host-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 26px 0;
+  border-top: 1px solid var(--line-soft);
+  margin-top: 24px;
+}
+
+.host-round-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.host-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.host-years {
+  font-size: 14px;
+  color: var(--muted2);
+  margin-top: 2px;
+}
+
+/* Highlights List */
+.prop-highlights-list {
+  padding: 6px 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.highlight-item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.highlight-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--ink);
+}
+
+.highlight-desc {
+  font-size: 14px;
+  color: var(--muted2);
+  margin-top: 2px;
+}
+
+/* Translation notice */
+.translation-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--grey100);
+  border-radius: 12px;
+  padding: 16px 18px;
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.btn-underline {
+  text-decoration: underline;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Description */
+.prop-description-block {
+  padding: 26px 0 32px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.prop-description-block p {
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: pre-line;
+  color: var(--ink);
+}
+
+.show-more-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Sleeping Section */
+.sleeping-section {
+  padding: 32px 0;
+  border-top: 1px solid var(--line-soft);
+}
+
+.section-title {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: var(--ink);
+}
+
+.sleeping-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.sleep-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.sleep-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+  display: block;
+}
+
+.sleep-title {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 14px;
+  color: var(--ink);
+}
+
+.sleep-sub {
+  font-size: 14px;
+  color: var(--muted2);
+  margin-top: 2px;
+}
+
+/* Amenities Section */
+.amenities-section {
+  padding: 32px 0;
+  border-top: 1px solid var(--line-soft);
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 8px;
+  margin-bottom: 24px;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  padding: 4px 0;
+}
+
+.amenity-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amenity-label {
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.amenity-struck {
+  color: var(--muted2);
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.show-all-amenities-btn {
+  border: 1px solid #222;
+  background: #fff;
+  border-radius: 12px;
+  padding: 13px 23px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.15s, transform 0.05s;
+  color: var(--ink);
+}
+
+.show-all-amenities-btn:hover {
+  background: var(--grey100);
+}
+
+.show-all-amenities-btn:active {
+  transform: scale(0.98);
+}
+
+/* Calendar Section */
+.calendar-section {
+  padding: 32px 0;
+  border-top: 1px solid var(--line-soft);
+}
+
+.calendar-header-block {
+  margin-bottom: 22px;
+}
+
+.calendar-header-block .section-title {
+  margin-bottom: 6px;
+}
+
+.calendar-subtitle {
+  font-size: 14px;
+  color: var(--muted2);
+}
+
+.calendar-months-container {
+  position: relative;
+}
+
+.calendar-nav-bar {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.cal-nav-btn {
+  pointer-events: auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.cal-nav-btn:hover {
+  background: var(--grey200);
+}
+
+.months-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 56px;
+}
+
+.month-name {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 18px;
+  color: var(--ink);
+}
+
+.weekdays-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 6px;
+}
+
+.weekday-label {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #222;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border-radius: 50%;
+  position: relative;
+  transition: background 0.15s;
+  color: var(--ink);
+}
+
+.cal-day.empty {
+  visibility: hidden;
+}
+
+.cal-day.selected-start,
+.cal-day.selected-end {
+  background: #222;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.cal-day.selected-start:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background: var(--grey200);
+  z-index: -1;
+}
+
+.cal-day.selected-end:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background: var(--grey200);
+  z-index: -1;
+}
+
+.cal-day.in-range {
+  background: var(--grey200);
+  border-radius: 0;
+}
+
+.cal-day.faded-day {
+  color: #ddd;
+  text-decoration: line-through;
+}
+
+.calendar-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.cal-keyboard-btn {
+  width: 30px;
+  height: 22px;
+  border: 1px solid #b0b0b0;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+}
+
+.cal-clear-btn {
+  background: none;
+  border: none;
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: 14px;
+  color: var(--ink);
+}

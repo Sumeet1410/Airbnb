@@ -1,0 +1,52 @@
+.listing-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 32px 0 18px;
+}
+
+.listing-title {
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: var(--ink);
+}
+
+.listing-header-actions {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.header-action-btn {
+  border: none;
+  background: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.header-action-btn:hover {
+  background: var(--grey200);
+}
+
+.header-action-btn:active {
+  transform: scale(0.96);
+}
+
+.action-underline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.header-action-btn.saved {
+  color: var(--rausch);
+}

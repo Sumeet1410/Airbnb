@@ -1,0 +1,63 @@
+﻿Take-Home Task: Airbnb-Clone App
+
+
+We’d like you to build a pixel-perfect clone of a real Airbnb listing page. The goal is to assess how precisely you can reproduce a polished, production-quality UI, exactly as it looks and exactly as it behaves.
+
+
+Match the reference exactly, visually and behaviorally. It is the single source of truth, and your clone must match it across:
+* Visual design: identical layout, spacing, typography, colours, icons, and assets.
+* Animations and motion: matching hover and scroll animations, and transitions.
+* Interaction and accessibility: keyboard navigation, focus management, and accessibility.
+
+
+Reference (the exact page to reproduce): https://airbnb-clone-umber-two.vercel.app 
+
+
+We are looking for AI-native developers. Internally, we use tools like Claude Code, Codex, and Cursor heavily in our development workflow, and we encourage you to use AI-assisted development for this task as well.
+
+
+We do not recommend doing this task without AI usage. Please use the latest premium AI models that can be accessed for free or at a substantial discount through legitimate sources such as the GitHub Student Developer Pack. With the right approach, it can be completed in around 3-4 hours using the latest AI models.
+
+
+AI agents and workflows can be used to help with the cloning implementation, any direct lift and shift of the codebase from the url could result in lower score or disqualification.
+
+
+We have a plagiarism detection mechanism in place. Please ensure that your work is original and does not contain any plagiarized content.
+
+
+________________
+What to Build
+Recreate the Airbnb listing page and its two overlay views exactly as they look and behave at the reference. There are three views:
+Screen
+	Expected implementation
+	Reference screenshot
+	Listing Page
+	The full property page. Match the layout, spacing, typography, colours, and interactions exactly.
+	  
+
+	Photo Tour
+	Full-screen photo gallery opened from Show all photos or any hero image.
+	  
+
+	Lightbox
+	Single-photo viewer opened from any gallery photo with prev/next arrows, keyboard ←/→ navigation. Match the interactions and animations exactly.
+	  
+
+	Note: Implement Desktop only; mobile version is not required
+Tech Stack
+You are free to choose the tech stack you are most comfortable with. Suggested options:
+* Frontend: React, Next.js, or Angular
+* Backend: Node.js or Java
+Backend is optional. You may also choose to store data in frontend/browser storage if that keeps your implementation simple and focused. You may use Vercel or any other free hosting platform for deployment.
+Architecture Diagram
+Submit a high-level architecture diagram for a production-scale vacation-rental marketplace (think Airbnb) alongside your app. The diagram should illustrate your scaling strategy for frontend, backend, storage, search, and deployment. Tools like lucid.app or excalidraw are recommended.
+What We Will Look At
+* Modern AI workflow usage (coding agents, sub-agents, skills, prompts)
+* How closely the clone matches the reference, visual fidelity and behavioural parity, including animations, transitions, and accessibility
+* Production architecture thinking
+* AI subagent configs for code quality and project structure
+Please keep the scope focused and do include your sub-agent/skill config files in your submission. A clean, complete implementation is better than an over-engineered incomplete one.
+Submission (Important: Please do not push the code to a public GitHub repository.)
+Please submit the task as per the instructions shared with you over email. The submission must include the following deliverables:
+1. A zipped file containing the code and architecture diagram (image/pdf file).
+2. The sequence of prompts used for AI-assisted development, it might be asked during submission.
