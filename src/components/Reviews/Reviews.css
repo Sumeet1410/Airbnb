@@ -289,3 +289,21 @@
 .show-all-reviews-btn:active {
   transform: scale(0.98);
 }
+
+@media (max-width: 1128px) {
+  .ratings-breakdown-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .rating-cat-col {
+    border-right: none !important;
+    padding: 10px 0;
+    min-height: auto;
+  }
+
+  .reviews-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

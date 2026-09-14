@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, ChevronLeft, ChevronRight, Upload, Heart } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Grid3X3 } from 'lucide-react';
 import './LightboxModal.css';
 
 export default function LightboxModal({
@@ -8,7 +8,8 @@ export default function LightboxModal({
   activeIndex,
   onClose,
   onPrev,
-  onNext
+  onNext,
+  onReturnToTour
 }) {
   // Lock body scroll
   useEffect(() => {
@@ -44,6 +45,8 @@ export default function LightboxModal({
   if (!isOpen || !photos || photos.length === 0) return null;
 
   const currentPhoto = photos[activeIndex] || photos[0];
+  const isFirst = activeIndex === 0;
+  const isLast = activeIndex === photos.length - 1;
 
   return (
     <div
@@ -52,27 +55,31 @@ export default function LightboxModal({
       aria-modal="true"
       aria-label="Image viewer lightbox"
     >
-      {/* Top Controls Bar */}
+      {/* Top Controls Bar matching required2.png */}
       <div className="lightbox-top-bar">
         <button
-          className="lightbox-close-btn"
-          onClick={onClose}
-          aria-label="Close photo viewer (Press Escape)"
+          className="lightbox-grid-btn"
+          onClick={onReturnToTour || onClose}
+          aria-label="View all photos in grid"
+          title="All photos"
         >
-          <X size={20} strokeWidth={2.4} />
-          <span className="close-label">Close</span>
+          <Grid3X3 size={18} strokeWidth={2.2} />
         </button>
 
-        <div className="lightbox-counter">
-          {activeIndex + 1} / {photos.length}
+        <div className="lightbox-center-title">
+          {currentPhoto.roomName || currentPhoto.alt || "Photo"}
         </div>
 
-        <div className="lightbox-top-actions">
-          <button className="lb-action-btn" aria-label="Share">
-            <Upload size={16} strokeWidth={2.2} />
-          </button>
-          <button className="lb-action-btn" aria-label="Save">
-            <Heart size={16} strokeWidth={2.2} />
+        <div className="lightbox-right-controls">
+          <span className="lightbox-counter-text">
+            {activeIndex + 1} of {photos.length}
+          </span>
+          <button
+            className="lightbox-close-btn"
+            onClick={onClose}
+            aria-label="Close photo viewer"
+          >
+            <X size={20} strokeWidth={2} />
           </button>
         </div>
       </div>
@@ -81,11 +88,12 @@ export default function LightboxModal({
       <div className="lightbox-stage">
         {/* Previous Button */}
         <button
-          className="lightbox-nav-btn lb-prev-btn"
+          className={`lightbox-nav-btn lb-prev-btn ${isFirst ? 'disabled' : ''}`}
           onClick={onPrev}
-          aria-label="Previous photo (Left arrow)"
+          disabled={isFirst}
+          aria-label="Previous photo"
         >
-          <ChevronLeft size={28} strokeWidth={2} />
+          <ChevronLeft size={20} strokeWidth={2.4} />
         </button>
 
         {/* Active Image */}
@@ -100,19 +108,13 @@ export default function LightboxModal({
 
         {/* Next Button */}
         <button
-          className="lightbox-nav-btn lb-next-btn"
+          className={`lightbox-nav-btn lb-next-btn ${isLast ? 'disabled' : ''}`}
           onClick={onNext}
-          aria-label="Next photo (Right arrow)"
+          disabled={isLast}
+          aria-label="Next photo"
         >
-          <ChevronRight size={28} strokeWidth={2} />
+          <ChevronRight size={20} strokeWidth={2.4} />
         </button>
-      </div>
-
-      {/* Bottom Caption Banner */}
-      <div className="lightbox-bottom-bar">
-        <p className="lightbox-room-caption">
-          {currentPhoto.roomName || currentPhoto.alt || "Photo"}
-        </p>
       </div>
     </div>
   );

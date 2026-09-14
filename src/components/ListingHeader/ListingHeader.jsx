@@ -2,22 +2,20 @@ import React, { useState } from 'react';
 import { Upload, Heart } from 'lucide-react';
 import './ListingHeader.css';
 
-export default function ListingHeader({ title, onShare }) {
+export default function ListingHeader({ title, onShare, onSaveChange }) {
   const [saved, setSaved] = useState(false);
 
   const handleSaveToggle = () => {
-    setSaved(!saved);
+    const nextSaved = !saved;
+    setSaved(nextSaved);
+    if (onSaveChange) {
+      onSaveChange(nextSaved);
+    }
   };
 
   const handleShareClick = () => {
-    if (navigator.share) {
-      navigator.share({
-        title: title,
-        url: window.location.href
-      }).catch(() => {});
-    } else {
-      navigator.clipboard.writeText(window.location.href);
-      if (onShare) onShare();
+    if (onShare) {
+      onShare();
     }
   };
 

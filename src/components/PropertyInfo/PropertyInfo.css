@@ -211,11 +211,18 @@
   border-top: 1px solid var(--line-soft);
 }
 
-.prop-description-block p {
+.prop-description-block .description-paragraph {
   font-size: 16px;
   line-height: 1.5;
   white-space: pre-line;
   color: var(--ink);
+}
+
+.description-paragraph-clamped {
+  max-height: 6.2em;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(#000 62%, transparent);
+  mask-image: linear-gradient(#000 62%, transparent);
 }
 
 .show-more-btn {
@@ -226,11 +233,15 @@
   font-size: 16px;
   font-weight: 500;
   color: #222;
-  text-decoration: underline;
-  text-underline-offset: 3px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  cursor: pointer;
+}
+
+.show-more-btn .show-more-text {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* Sleeping Section */

@@ -118,7 +118,10 @@ export default function App() {
         {/* Listing Title & Share/Save */}
         <ListingHeader
           title={listingData.title}
-          onShare={() => showToast("Listing URL copied to clipboard!")}
+          onShare={() => showToast("Share options")}
+          onSaveChange={(isSaved) =>
+            showToast(isSaved ? "Saved to wishlist" : "Removed from wishlist")
+          }
         />
 
         {/* 5-Photo Hero Grid - Clicking any photo opens strictly the Photo Tour */}
@@ -214,7 +217,7 @@ export default function App() {
         }}
       />
 
-      {/* View 3: Single-Photo Lightbox Viewer (Accessible only via Photo Tour) */}
+      {/* View 3: Single-Photo Lightbox Viewer (Accessible via Photo Tour) */}
       <LightboxModal
         isOpen={isLightboxOpen}
         photos={allPhotos}
@@ -222,6 +225,10 @@ export default function App() {
         onClose={() => setIsLightboxOpen(false)}
         onPrev={handlePrevPhoto}
         onNext={handleNextPhoto}
+        onReturnToTour={() => {
+          setIsLightboxOpen(false);
+          setIsTourOpen(true);
+        }}
       />
 
       {/* Amenities Modal */}

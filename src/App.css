@@ -3,10 +3,16 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .listing-main-container {
   flex: 1;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* 2-Column Desktop Grid matching reference ._lhKJir */
@@ -66,9 +72,12 @@
   }
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 1128px) {
   .listing-layout-columns {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .listing-right-column {
+    display: none;
   }
 }

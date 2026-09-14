@@ -48,5 +48,5 @@
 }
 
 .header-action-btn.saved {
-  color: var(--rausch);
+  background: var(--grey200);
 }

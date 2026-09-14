@@ -67,8 +67,8 @@ export const listingData = {
     }
   ],
   description: {
-    short: "🌴 Plan Your Relaxing Holiday at Amor De Goa by Mirashya Homes! ✨ Stay in this cozy 1BHK in the heart of Candolim, featuring a private jacuzzi 🛁 for the perfect unwind. Enjoy high-speed WiFi 💻, Smart TV 📺, pet-friendly comfort 🐾, and stylish interiors. Just minutes from Candolim Beach 🏖️, popular cafés, restaurants, and nightlife 🍹, it's ideal for couples seeking romance, relaxation, and a touch of luxury in North Goa. 💖 🌴",
-    full: "🌴 Plan Your Relaxing Holiday at Amor De Goa by Mirashya Homes! ✨ Stay in this cozy 1BHK in the heart of Candolim, featuring a private jacuzzi 🛁 for the perfect unwind. Enjoy high-speed WiFi 💻, Smart TV 📺, pet-friendly comfort 🐾, and stylish interiors. Just minutes from Candolim Beach 🏖️, popular cafés, restaurants, and nightlife 🍹, it's ideal for couples seeking romance, relaxation, and a touch of luxury in North Goa. 💖 🌴\n\nThe space features a spacious open-concept living room, modern kitchenette with all essential cookware, a master bedroom with premium plush bedding, and an exclusive private outdoor terrace with an authentic heated jacuzzi tub. Perfect for unwinding with a drink under the stars."
+    short: "🌴 Plan Your Relaxing Holiday at Amor De Goa by Mirashya Homes! ✨ Stay in this cozy 1BHK in the heart of Candolim, featuring a private jacuzzi 🛁 for the perfect unwind. Enjoy high-speed WiFi 💻 , Smart TV 📺 , pet-friendly comfort 🐾 , and stylish interiors. Just minutes from Candolim Beach 🏖️ , popular cafés, restaurants, and nightlife 🍹 , it’s ideal for couples seeking romance, relaxation, and a touch of luxury in North Goa. 💖 🌴",
+    full: "🌴 Plan Your Relaxing Holiday at Amor De Goa by Mirashya Homes! ✨ Stay in this cozy 1BHK in the heart of Candolim, featuring a private jacuzzi 🛁 for the perfect unwind. Enjoy high-speed WiFi 💻 , Smart TV 📺 , pet-friendly comfort 🐾 , and stylish interiors. Just minutes from Candolim Beach 🏖️ , popular cafés, restaurants, and nightlife 🍹 , it’s ideal for couples seeking romance, relaxation, and a touch of luxury in North Goa. 💖 🌴"
   },
   heroImages: [
     {
@@ -234,8 +234,29 @@ export const listingData = {
       id: "stay-5",
       title: "Luxury Casa Bella 1BHK with plunge pool, Calangute",
       price: "₹39,942",
-      rating: "4.9",
+      rating: "4.95",
       image: "/assets/s5.jpeg"
+    },
+    {
+      id: "stay-6",
+      title: "Kanso by Earthen Window | Jacuzzi | Terrace | Pool",
+      price: "₹45,648",
+      rating: "5.0",
+      image: "/assets/s6.jpeg"
+    },
+    {
+      id: "stay-7",
+      title: "Luxury Apt | Private Pool | 6 Mins from Beach",
+      price: "₹48,786",
+      rating: "4.93",
+      image: "/assets/s2.jpeg"
+    },
+    {
+      id: "stay-8",
+      title: "Serendipity Cottage - Calm Stay in Calangute-Baga.",
+      price: "₹22,824",
+      rating: "4.92",
+      image: "/assets/s4.jpeg"
     }
   ],
   photoTourRooms: [

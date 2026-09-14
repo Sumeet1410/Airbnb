@@ -2,7 +2,7 @@
   position: relative;
   z-index: 50;
   border-bottom: 1px solid var(--line-soft);
-  background: #fff;
+  background-color: #ffffff !important;
   width: 100%;
 }
 
@@ -14,6 +14,7 @@
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: 0 80px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 1128px) {
@@ -25,6 +26,10 @@
 @media (max-width: 743px) {
   .navbar-inner {
     padding: 0 24px;
+  }
+  .search-bar-pill,
+  .navbar-btn-link {
+    display: none;
   }
 }
 
@@ -42,14 +47,6 @@
   width: auto;
   display: block;
   fill: var(--rausch);
-}
-
-.airbnb-brand-text {
-  font-size: 20px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  margin-left: 6px;
-  color: var(--rausch);
 }
 
 /* Search Bar Pill */
@@ -85,10 +82,11 @@
 }
 
 .searchbar-house-icon {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
+  width: 48px;
+  height: 48px;
+  object-fit: fill;
   display: block;
+  margin-left: -6px;
 }
 
 .search-pill-divider {
@@ -139,45 +137,21 @@
   background: var(--grey100);
 }
 
-.navbar-globe-btn {
+/* Circular Buttons matching requirement1.png */
+.navbar-circle-btn {
   width: 40px;
   height: 40px;
   border: none;
   border-radius: 50%;
-  background: transparent;
+  background: var(--grey200);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: background 0.18s;
   color: #222;
-}
-
-.navbar-globe-btn:hover {
-  background: var(--grey100);
-}
-
-.navbar-profile-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 5px 6px 5px 14px;
-  border: 1px solid var(--line);
-  border-radius: 30px;
   cursor: pointer;
-  background: #fff;
-  transition: box-shadow 0.2s ease;
 }
 
-.navbar-profile-pill:hover {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
-}
-
-.navbar-user-avatar {
-  width: 30px;
-  height: 30px;
-  background-color: #717171;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.navbar-circle-btn:hover {
+  background: var(--grey300);
 }

@@ -16,6 +16,16 @@
   --font: "Airbnb Cereal VF", Circular, -apple-system, BlinkMacSystemFont, "system-ui", Roboto, "Helvetica Neue", sans-serif;
   --shadow-card: 0 6px 16px rgba(0, 0, 0, .12);
   --shadow-hover: 0 2px 4px rgba(0, 0, 0, .18);
+  --bg-white: #ffffff;
+  --bg-hover: #f7f7f7;
+  --text-main: #222222;
+  --text-secondary: #717171;
+  --border-subtle: #ebebeb;
+  --border-light: #dddddd;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 30px;
 }
 
 *, *::before, *::after {
@@ -24,6 +34,8 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -35,6 +47,8 @@ body {
   line-height: 1.43;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body.modal-open {
@@ -60,9 +74,11 @@ h1, h2, h3, h4, p {
 
 /* Base Container */
 .page-container {
+  width: 100%;
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 80px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 1128px) {

@@ -111,8 +111,14 @@
   transition: transform 0.1s, background 0.15s;
 }
 
-.nearby-nav-btn:hover {
+.nearby-nav-btn:hover:not(:disabled) {
   background: var(--grey100);
+}
+
+.nearby-nav-btn:disabled,
+.nearby-nav-btn.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 .nearby-cards-track {
@@ -129,7 +135,7 @@
 }
 
 .nearby-stay-card {
-  flex: 0 0 calc((100% - 80px) / 5);
+  flex: 0 0 calc((100% - 40px) / 3);
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -153,42 +159,62 @@
 }
 
 .nearby-title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
+  line-height: 18px;
   color: var(--ink);
-  line-height: 1.35;
+  margin-top: 8px;
   margin-bottom: 4px;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .nearby-pricing-row {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  font-size: 14px;
+  align-items: center;
+  font-size: 13px;
+  margin-top: 4px;
+  color: var(--ink);
 }
 
 .nearby-price {
-  font-weight: 500;
+  font-size: 13px;
   color: var(--ink);
+}
+
+.nearby-rating-sep {
+  user-select: none;
 }
 
 .nearby-rating {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
-  font-weight: 500;
-  font-size: 14px;
+  gap: 3px;
+  font-size: 13px;
   color: var(--ink);
 }
 
-@media (max-width: 950px) {
+.nearby-star-ico {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: -1px;
+}
+
+@media (max-width: 1128px) {
   .things-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+  .nearby-stay-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+  }
+}
+
+@media (max-width: 743px) {
   .nearby-stay-card {
     flex: 0 0 calc((100% - 20px) / 2);
   }

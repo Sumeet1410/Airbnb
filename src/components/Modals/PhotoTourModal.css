@@ -2,7 +2,9 @@
 .photo-tour-overlay {
   position: fixed;
   inset: 0;
-  background-color: var(--bg-white);
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff !important;
   z-index: 200;
   overflow-y: auto;
   display: flex;
@@ -15,7 +17,7 @@
   left: 0;
   right: 0;
   height: 72px;
-  background-color: var(--bg-white);
+  background-color: #ffffff !important;
   border-bottom: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
